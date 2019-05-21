@@ -1,0 +1,22 @@
+﻿@page "/databinding"
+
+<p>
+    @* TwoWay *@
+    入力
+    <input type="text" bind="@Text" oninput="@(ui=> { Text = (string)ui.Value; })"/>
+</p>
+
+<p>
+    @* OneWay *@
+    出力
+    <input type="text" value="@Text"/>
+</p>
+
+
+@functions{
+    public string Text { get; set; }
+
+    public void Update()
+    {
+    }
+}
